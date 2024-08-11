@@ -1,5 +1,6 @@
 import sqlite3
 import random
+
 def win(login,bet):
     cursor.execute("UPDATE users SET balance = balance + ? WHERE login = ?", [bet, login])
     cursor.execute("UPDATE casino SET balance = balance - ?", [bet])
